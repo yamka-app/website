@@ -1,0 +1,115 @@
+@font-face {
+    font-family: RobotoBold;
+    src: url(/fonts/Roboto-Bold.ttf)
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/fonts/Montserrat-Bold.ttf)
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/fonts/Roboto-Regular.ttf)
+}
+
+@keyframes gradientAnimation {
+    0%   { background-position: 0% 50% }
+    50%  { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+:root {
+    --accent: #f47a3e;
+    --accent-dim: #c06132;
+    --accent-dim-2: #b35a2e;
+    --rainbow-grad: linear-gradient(45deg, #fbc32a 0%,
+                                           #ffe923 33%,
+                                           #7bff23 66%,
+                                           #23ff48 100%);
+
+    --danger: #e41e1e;
+    --danger-dim-1: #b61818;
+    --danger-dim-2: #8a1010;
+
+    --apply: #2ac02a;
+    --apply-dim-1: #1d861d;
+    --apply-dim-2: #146414;
+
+    --red: #e41e1e;
+    --yellow: #c7c72c;
+    --green: #2ac02a;
+    
+    --shade-1: #0a0a0a;
+    --shade-2: #0e0e0e;
+    --shade-3: #101010;
+    --shade-3-trans: #101010bf;
+    --shade-4: #181818;
+    --shade-5: #1d1d1d;
+    --shade-6: #202020;
+    --shade-7: #282828;
+    --shade-8: #f3f3f3;
+
+    --foreground-1: #afafaf;
+    --foreground-2: #dbdbdb;
+    --foreground-3: #ebebeb;
+    --foreground: #ffffff;
+
+    --shadow:   #00000013;
+    --shadow-h: #00000020;
+    --shadow-1: #00000060;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*::-webkit-scrollbar-track {
+    background: #00000000;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--shade-7);
+    border-radius: 5px;
+}
+
+html {
+    background: var(--shade-1);
+    font-family: Montserrat;
+    color: var(--foreground);
+}
+body {
+    display: flex;
+    flex-direction: row;
+}
+html, body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: var(--shade-1);
+    transition: color 0.1s;
+}
+a:not(.light.grad):hover {
+    color: var(--shade-7);
+}
+.footer a {
+    color: var(--foreground-1);
+}
+.footer a:hover {
+    color: var(--foreground);
+}
+
+img {
+    max-width: 50vw;
+    max-height: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

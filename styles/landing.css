@@ -1,0 +1,165 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: var(--foreground);
+}
+
+#navbar {
+    z-index: 1000;
+    padding: 20px 5vw 20px 5vw;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--foreground);
+    box-shadow: 0 0 25px var(--shadow);
+}
+
+#navbar .logo {
+    width: 64px;
+    height: 64px;
+    margin-right: 64px;
+    border-radius: 10px;
+    background: var(--rainbow-grad);
+    background-size: 200% 200%;
+    animation: gradientAnimation 30s ease infinite;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--shade-1);
+    margin-right: 20px;
+    font-family: RobotoBold;
+    font-size: 1.2vmax;
+}
+#navbar a:hover {
+    color: var(--shade-7);
+}
+#navbar a:active {
+    color: var(--shade-6);
+}
+
+.main-container,
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    padding: 10vw 0 10vw 0;
+    margin-bottom: 80px;
+    background-color: var(--shade-1);
+    box-shadow: 0 0 25px var(--shadow-1);
+}
+.footer {
+    margin-bottom: 0;
+}
+
+.grad {
+    background: var(--rainbow-grad);
+    background-size: 200% 200%;
+    animation: gradientAnimation 30s ease infinite;
+    filter: brightness(100%);
+    color: transparent;
+            background-clip: text;
+    -webkit-background-clip: text;
+}
+a.grad {
+    text-decoration: none;
+}
+.light.grad {
+    transition-property: filter, -moz-filter, -ms-filter, -o-filter, -webkit-filter;
+    transition-duration: 0.1s;
+    filter: brightness(50%);
+}
+.light.grad:hover {
+    filter: brightness(75%);
+}
+
+#slogan,
+h1 {
+    font-family: Montserrat;
+}
+#slogan {
+    font-size: 50pt; /*fallback*/
+    font-size: 5vmax; /*dynamic*/
+    margin-top: 10vh;
+}
+h1 {
+    font-size: 2vmax;
+    margin: 5px;
+    color: var(--shade-1);
+}
+
+#slogan-sub,
+h2, h3, h4, h5, h6, p, ul, li, code {
+    margin: 0 0 10px 0;
+    font-family: Roboto;
+    font-size: 1.3vmax;
+    color: var(--shade-1);
+    width: 50vw;
+    overflow: wrap;
+    text-align: center;
+}
+h3, h4, h5, h6 {
+    font-size: 1.1vmax;
+}
+p, li, code {
+    text-align: left;
+    font-size: 1vmax;
+}
+code {
+    font-family: monospace;
+}
+.footer > *:not(#slogan),
+.main-container > *:not(#slogan) {
+    color: var(--foreground);
+}
+.legal-doc h2 {
+    font-size: 1.5vmax;
+}
+
+.info-section {
+    margin: 0 0 80px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--shade-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 25px var(--shadow);
+    transition: box-shadow 0.2s;
+}
+.info-section:hover {
+    box-shadow: 0 0 50px var(--shadow-h);
+}
+
+h3 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.hard-pan-left {
+    align-items: flex-start;
+    margin-left: 20vw;
+}
+.hard-pan-right {
+    align-items: flex-end;
+    margin-right: 20vw;
+}
+.hard-pan-left h1 {
+    margin-left: 2vw;
+}
+.hard-pan-right h1 {
+    margin-right: 2vw;
+}
+
+.info-section img {
+    border-radius: 5px;
+    max-width: 25vw;
+}

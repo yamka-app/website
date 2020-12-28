@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="/styles/default.css"/>
+        <link rel="stylesheet" type="text/css" href="/styles/landing.css"/>
+        <title>Order | Stop being a product | Legal</title>
+    </head>
+    <body>
+        <div id="navbar">
+            <div class="logo"><img src="/logo_o.png"></div>
+            <a href="..">Home</a>
+            <a href="../download">Download</a>
+            <a href="">Legal</a>
+            <a href="https://docs.ordermsg.tk">Developers</a>
+        </div>
+
+        <div class="main-container">
+            <span id="slogan" class="grad">Legal</span>
+        </div>
+
+        <div class="info-section">
+            <h1>Welcome</h1>
+            <h2>
+                This page contains all legal documents related to our service, pulled from
+                our <a href="https://github.com/ordermsg/legal">GitHub</a> repository
+            </h2>
+        </div>
+
+        <div class="info-section legal-doc" x-md-source="TERMS.md"></div>
+        <div class="info-section legal-doc" x-md-source="PRIVACY.md"></div>
+        <div class="info-section legal-doc" x-md-source="SECURITY.md"></div>
+        <div class="info-section legal-doc" x-md-source="LICENSE.md"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked@1.2.7/lib/marked.min.js"></script>
+        <script src="/js/legal_loader.js"></script>
+    </body>
+</html>
