@@ -106,6 +106,12 @@ h2, h3, h4, h5, h6, p, ul, li, code {
     overflow: wrap;
     text-align: center;
 }
+.flex-col .info-section {
+    margin: 2vw;
+}
+.flex-col .info-section h2 {
+    width: 30vw;
+}
 h3, h4, h5, h6 {
     font-size: 1.1vmax;
 }
