@@ -122,8 +122,10 @@ p, li, code {
 code {
     font-family: monospace;
 }
-.footer > *:not(#slogan),
-.main-container > *:not(#slogan) {
+.footer *:not(#slogan),
+.main-container *:not(#slogan) {
+    width: unset;
+    margin: 0;
     color: var(--foreground);
 }
 .legal-doc h2 {
