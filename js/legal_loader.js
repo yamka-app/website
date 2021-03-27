@@ -1,4 +1,4 @@
-const baseUrl = "https://raw.githubusercontent.com/ordermsg/legal/master/";
+const baseUrl = "https://raw.githubusercontent.com/yamka-app/legal/master/";
 divs = document.getElementsByClassName("legal-doc");
 
 for(var i = 0; i < divs.length; i++) {

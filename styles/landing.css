@@ -5,7 +5,7 @@ body {
     flex-shrink: 0;
     background-color: var(--foreground);
 }
-
+    
 #navbar {
     z-index: 1000;
     padding: 20px 5vw 20px 5vw;
@@ -15,35 +15,36 @@ body {
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: var(--foreground);
-    box-shadow: 0 0 25px var(--shadow);
+    background-color: #131114;
+
+    animation: op 1s ease;
 }
 
-#navbar .logo {
-    width: 64px;
+.logo {
+    width:  64px;
     height: 64px;
-    margin-right: 64px;
-    border-radius: 10px;
+    margin-right:  64px;
+
     background: var(--rainbow-grad);
-    background-size: 200% 200%;
-    animation: gradientAnimation 30s ease infinite;
 }
 
 #navbar a {
     text-decoration: none;
-    color: var(--shade-1);
+    color: var(--foreground);
     margin-right: 20px;
-    font-family: RobotoBold;
+    font-family: RobotoBold, sans-serif;
     font-size: 1.2vmax;
+    transition: color 0.2s ease;
 }
 #navbar a:hover {
-    color: var(--shade-7);
+    color: var(--foreground-2);
 }
 #navbar a:active {
-    color: var(--shade-6);
+    color: var(--foreground-1);
 }
 
 .main-container,
+.main-container-home,
 .footer {
     width: 100%;
     display: flex;
@@ -57,17 +58,33 @@ body {
     box-shadow: 0 0 25px var(--shadow-1);
 }
 .footer {
+    background-color: #131114;
     margin-bottom: 0;
+}
+.main-container-home {
+    padding: 15vw 0 10vw 0;
+    height:  75vh;
+    background-color: #131114;
+}
+
+.slogan-sep {
+    height: 1px;
+    width:  25vw;
+    margin: 15px;
+    background-color: #42314b;
 }
 
 .grad {
     background: var(--rainbow-grad);
-    background-size: 200% 200%;
-    animation: gradientAnimation 30s ease infinite;
-    filter: brightness(100%);
-    color: transparent;
             background-clip: text;
     -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+}
+.main-container-home .grad {
+    color: #131114;
+}
+.main-container .grad {
+    color: var(--shade-1);
 }
 a.grad {
     text-decoration: none;
@@ -75,19 +92,19 @@ a.grad {
 .light.grad {
     transition-property: filter, -moz-filter, -ms-filter, -o-filter, -webkit-filter;
     transition-duration: 0.1s;
-    filter: brightness(50%);
+    filter: brightness(75%);
 }
 .light.grad:hover {
-    filter: brightness(75%);
+    filter: brightness(100%);
 }
 
 #slogan,
 h1 {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 #slogan {
-    font-size: 50pt; /*fallback*/
-    font-size: 5vmax; /*dynamic*/
+    font-size: 50pt;
+    font-size: 5vmax;
     margin-top: 10vh;
 }
 h1 {
@@ -99,18 +116,19 @@ h1 {
 #slogan-sub,
 h2, h3, h4, h5, h6, p, ul, li, code {
     margin: 0 0 10px 0;
-    font-family: Roboto;
-    font-size: 1.3vmax;
+    font-family: Roboto, sans-serif;
+    font-size: 1.1vmax;
     color: var(--shade-1);
     width: 65vw;
     overflow: wrap;
+    overflow-wrap: break-word;
     text-align: center;
 }
 .flex-col .info-section {
     margin: 2vw;
 }
 .flex-col .info-section h2 {
-    width: 30vw;
+    width: 40vw;
 }
 h3, h4, h5, h6 {
     font-size: 1.1vmax;
@@ -122,14 +140,27 @@ p, li, code {
 code {
     font-family: monospace;
 }
-.footer *:not(#slogan),
-.main-container *:not(#slogan) {
+.footer h2:not(#slogan),
+.main-container *:not(#slogan),
+.main-container-home *:not(div):not(#slogan) {
     width: unset;
     margin: 0;
     color: var(--foreground);
 }
 .legal-doc h2 {
     font-size: 1.5vmax;
+}
+.footer h2 {
+    font-family: Montserrat;
+}
+.footer-sep {
+    height: 30px;
+    width:  1px;
+    margin: 15px;
+    background-color: #42314b;
+}
+.footer img {
+    margin-left: 10px;
 }
 
 .info-section {
@@ -142,9 +173,6 @@ code {
     align-items: center;
     box-shadow: 0 0 25px var(--shadow);
     transition: box-shadow 0.2s;
-}
-.info-section:hover {
-    box-shadow: 0 0 50px var(--shadow-h);
 }
 
 h3 {
@@ -170,4 +198,32 @@ h3 {
 .info-section img {
     border-radius: 5px;
     max-width: 25vw;
+}
+
+
+
+.appear {
+    opacity: 0;
+    animation: appear 1s ease,
+               stay   1s infinite;
+}
+@keyframes appear-ss {
+    from { transform: translateY(25vw); opacity: 0; width: 0    }
+    to   { transform: translateY(0);    opacity: 1; width: 25vw }
+}
+.appear.slogan-sep {
+    animation: appear-ss 1s ease,
+               stay      1s infinite;
+}
+.appear:nth-child(1) {
+    animation-delay: 200ms;
+}
+.appear:nth-child(2) {
+    animation-delay: 400ms;
+}
+.appear:nth-child(3) {
+    animation-delay: 600ms;
+}
+.appear:nth-child(4) {
+    animation-delay: 800ms;
 }
