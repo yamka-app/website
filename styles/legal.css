@@ -1,0 +1,45 @@
+.legal-doc {
+    align-items: flex-start;
+    width: 50vw;
+}
+
+.legal-doc h1, .legal-doc h2, .legal-doc h3, .legal-doc h4, .legal-doc h5, .legal-doc h6 {
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+}
+
+.legal-doc h1 {
+    font-size: 2vmax;
+}
+.legal-doc h2 {
+    font-size: 1.75vmax;
+}
+.legal-doc h4 {
+    font-size: 1.25vmax;
+    margin: 0.7vmax 0;
+}
+.legal-doc p, .legal-doc li, .legal-doc code {
+    font-size: 1.1vmax;
+    margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .legal-doc {
+        width: 90vw;
+    }
+
+    .legal-doc h1 {
+        font-size: 4vmax;
+    }
+    .legal-doc h2 {
+        font-size: 3vmax;
+    }
+    .legal-doc h4 {
+        font-size: 2.5vmax;
+        margin: 0.7vmax 0;
+    }
+    .legal-doc p, .legal-doc li, .legal-doc code {
+        font-size: 1.7vmax;
+        margin: 0;
+    }
+}

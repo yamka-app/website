@@ -1,109 +1,129 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/styles/default.css"/>
         <link rel="stylesheet" type="text/css" href="/styles/landing.css"/>
         <title>Yamka | Stop being a product | Home</title>
     </head>
+
     <body>
         <div id="navbar">
-            <img class="logo" src="logo_cut.png"></img>
+            <img class="logo" src="logo.png"></img>
             <a href="">Home</a>
             <a href="download">Download</a>
             <a href="legal">Legal</a>
             <a href="https://docs.yamka.app">Developers</a>
         </div>
         
-        <div class="main-container-home">
-            <span id="slogan" class="grad appear">Stop being a product</span>
-            <div class="slogan-sep appear"></div>
-            <h1 class="appear">Start being a user</h1>
-            <h2 class="appear">Yamka is a messaging service that focuses on users' privacy and feedback</h2>
+        <div class="main-container red">
+            <span id="slogan">Stop being a product</span>
+            <h1>and start discovering other people more easily while you're at it.</h1>
+
+            <h2>Yamka is a messenger made by those who value privacy. We don't sell your data.</h2>
+            <h2 id="mobile-additional">Scroll down to learn about features available to desktop users. Unfortunately, there are no official mobile clients yet.</h2>
         </div>
 
 
 
-        <div class="flex-row">
-            <div class="flex-col">
+        <div class="feat-row">
+            <div class="feat-col">
                 <div class="info-section">
                     <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/privacy-policy.png"/>
                     <h1>Private</h1>
                     <h2>
-                        We don't collect your data beyond such that's needed to provide the service.
-                        And we don't give it away - for free or not.
+                        We don't collect your data beyond what you explicitly provide to us.
+                        And we don't give it away. At all.
                     </h2>
                 </div>
-        
+            </div>
+
+            <div class="feat-col">
                 <div class="info-section">
                     <img width="48" height="48" src="/osi-fluent.png"/>
                     <h1>Free</h1>
                     <h2>
-                        All official clients, SDKs and libraries are open source and peer-reviewed, which
-                        enables superior security, stability and feature set
-                    </h2>
-                </div>
-
-                <div class="info-section">
-                    <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/bunch-of-keys-1.png"/>
-                    <h1>Secure</h1>
-                    <h2>
-                        Your direct messages are secured using End-to-End Encryption (E2EE), meaning nobody
-                        (even us!) except you and your penfriend can read them. 
+                        Everything we ever wrote for this project is open source.
+                        This enables superior security, stability and feature set.
                     </h2>
                 </div>
             </div>
-            
-            <div class="flex-col">
-                <div class="info-section">
-                    <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/features-list.png"/>
-                    <h1>Modern and featureful</h1>
-                    <h2>
-                        Find a group of people by your interests or get invited into one.
-                        Chat in multiple channels. Perform administrative commands and choose other people who have that
-                        ability. Diversify your experience using automated bots with deep integration. And so much more!
-                    </h2>
-                </div>
+        </div>
 
+        <div class="feat-row">
+            <div class="feat-col">
                 <div class="info-section">
                     <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/lightning-bolt.png"/>
                     <h1>Lightning fast</h1>
                     <h2>
-                        Starts up in less than 3 seconds on an 8 year old laptop and works faster thanks to custom software solutions
+                        Starts up in less than 3 seconds, stays responsive even on aging
+                        hardware thanks to custom software solutions.
                     </h2>
                 </div>
+            </div>
         
+            <div class="feat-col">
                 <div class="info-section">
                     <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/headset.png"/>
                     <h1>Supports voice chat</h1>
                     <h2>
-                        Person-to-person voice communications are secured using E2EE too!
+                        Video coming soon!
                     </h2>
                 </div>
             </div>
         </div>
 
-        <div class="info-section">
-            <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/donate.png"/>
-            <h1>Nonprofit</h1>
-            <h2>
-                We run off of generous <a href="donate">donations</a> of people that make us possible.
-                Not being one of them is totally okay, but support is much appreciated.
-                It doesn't have to be money. Computing power, moral support and spreading the word are ways to help us too!
-            </h2>
+        <div class="feat-row">
+            <div class="feat-col">
+                <div class="info-section">
+                    <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/donate.png"/>
+                    <h1>Nonprofit</h1>
+                    <h2>
+                        We run off of generous <a href="donate">donations</a> that our users make. Money we receive
+                        is used to rent hardware that the service runs on.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="feat-col">
+                <div class="info-section">
+                    <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/features-list.png"/>
+                    <h1>Modern and featureful</h1>
+                    <h2>
+                        The feature list is quite long so we decided not to put it here.
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="feat-row">
+            <div class="feat-col">
+                <div class="info-section">
+                    <img width="48" height="48" src="https://img.icons8.com/fluent/48/000000/bunch-of-keys-1.png"/>
+                    <h1>Secure</h1>
+                    <h2>
+                        Your direct messages are encrypted end-to-end. Nobody (including us)
+                        can read them except you and the person you're communicating with.
+                    </h2>
+                </div>
+            </div>
         </div>
 
 
 
         <div class="info-section">
-            <h1>Ready to begin using Yamka? Click <a href="download" class="light grad">❯here❮</a></h1>
+            <h1>Ready to begin using Yamka? Click <a href="download" class="light">here</a></h1>
         </div>
 
+
+        <div class="sep ft"></div>
         <div class="footer">
             <div class="flex-row center">
                 <h2>Project and website by </h2>
-                <a href="https://github.com/portasynthinca3"><img width="48" height="48" alt="portasynthinca3" src="/psi3-logo.png"/></a>
-                <div class="footer-sep"></div>
-                <h2>Some icons by</h2>
+                <a href="https://github.com/portasynthinca3">portasynthinca3</a>
+            </div>
+            <div class="flex-row center">
+                <h2>Icons by</h2>
                 <a href="https://icons8.com"><img width="48" height="48" alt="icons8" src="https://img.icons8.com/fluent/48/000000/icons8-new-logo.png"/></a>
             </div>
         </div>
